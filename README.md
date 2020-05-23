@@ -2,17 +2,17 @@
 This is a small project designed to showcase a simple shopping cart experience. The project is designed in three parts; the frontend (ReactJS), the backend (Java with Spring Boot) and the database (MongoDB). The code can be cloned from this git repository and with Docker you can launch it without any further dependencies. 
 
 # Design and architecture
-##Frontend
+## Frontend
 * ReactJS was chosen for the frontend because it is fast, responsive and has tools to manage state.
   * Within the ReactJS library, Redux was used to centralise state which is used by multiple components. This allows the state to be decoupled from components that are responsible for managing the view.
 
-##Backend
+## Backend
 * Java and Spring Boot was chosen for the backend to facilitate quicker development. There are many tools inside Spring Boot that allow getting started quickly.
   * Features include dependency injection and the Spring Data framework.
   * Spring Data contains Repository abstractions that allow boilerplate CRUD functionality to be defined through annotations and simple Java interfaces.
   * In addition, a not so familiar library called *Lombok* was used. This library automates the generation of boilerplate code such as constructors, getters/setters, etc. and works through annotations marked on POJO classes.
   
-##Database
+## Database
 * MongoDB was chosen for the backend mainly because it is free and very flexible in terms of what it can store. Even the product images can be stored within the database. The product images are, however, stored on the frontend web server to allow faster load times when scaling up. However, complex object structures can be saved in MongoDB without requiring relational links between MongoDB Collections (known as tables in relational databases). An example of this is the Order collection (table, in relational database terminology). The Order collection consists of a one-to-many Order-to-Product relationship.
 
 
