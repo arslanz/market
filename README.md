@@ -41,7 +41,7 @@ This is a small project designed to showcase a simple shopping cart experience. 
   * Spring Data contains Repository abstractions that allow boilerplate CRUD functionality to be defined through annotations and simple Java interfaces.
   * In addition, a not so familiar library called *Lombok* was used. This library automates the generation of boilerplate code such as constructors, getters/setters, etc. and works through annotations marked on POJO classes.
   
-* MongoDB was chosen for the backend mainly because it is free and very flexible in terms of what it can store. Even storing the images for the products can be stored within the database. The product images are actually stored on the frontend web server to allow faster load times when scaling up. However, complex object structures can be saved in MongoDB without requiring relational links between MongoDB Collections (known as tables in relational databases).
+* MongoDB was chosen for the backend mainly because it is free and very flexible in terms of what it can store. Even the product images can be stored within the database. The product images are, however, stored on the frontend web server to allow faster load times when scaling up. However, complex object structures can be saved in MongoDB without requiring relational links between MongoDB Collections (known as tables in relational databases). An example of this is the Order collection (table, in relational database terminology). The Order collection consists of a one-to-many Order-to-Product relationship.
 
 
 
