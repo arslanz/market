@@ -1,0 +1,4 @@
+Table: products
+columns: id, name, description, price, quantity, image
+
+

@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: mongo
+    restart: unless-stopped
+    ports:
+      - "27017-27019:27017-27019"
+    volumes:
+      - ./database/initial-data/:/app/data/
+      - ./database/script/mongo_import.sh:/docker-entrypoint-initdb.d/mongo_import.sh
+
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    stdin_open: true
+    ports:
+        - "3000:3000"

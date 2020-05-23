@@ -1,0 +1,5 @@
+name, description, price, quantity, image
+"Hand Sanitizer", "Aloe vera with alcohol gel that kills 99% of germs", 5.99, 10, "/images/products/hand-sanitizer.jpg"
+"N95 Mask", "Airtight mask for protection against airborne viruses", 10.00, 5, "/images/products/n95-mask.jpg"
+"Toilet paper", "Extra strong, even extra comfort toilet paper", 12.99, 10, "/images/products/toilet-paper.jpg"
+

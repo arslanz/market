@@ -1,0 +1,33 @@
+Pages:
+
+Welcome
+--------
+Simple page with message and link to inventory/catalogue page.
+Form to enter your user's name.
+
+Inventory/catalogue
+--------------------
+List of products.
+-Each product has title, description, price, quantity.
+-Each product has an add to cart button.
+
+Count of items in basket in top right corner.
+
+EXTRA: picture per product
+
+Shopping cart
+--------------
+List of products in the cart.
+-Each product has quantity specified with ability to modify.
+Total for the order.
+Submit order / check out button.
+
+Thank you for your order
+-------------------------
+Order summary.
+-product titles with quantity
+-total
+
+Order Id.
+Button to exit (back to Welcome back).
+Button to submit a new order (catalogue page).
