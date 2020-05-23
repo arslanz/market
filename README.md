@@ -1,8 +1,29 @@
 # Shopping Cart
 This is a small project designed to showcase a simple shopping cart experience. The project is designed in three parts; the frontend (ReactJS), the backend (Java with Spring Boot) and the database (MongoDB). The code can be cloned from this git repository and with Docker you can launch it without any further dependencies. 
 
+# Design and architecture
+## Frontend
+ReactJS was chosen for the frontend because it is fast, responsive and has tools to manage state.
+  * Within the ReactJS library, Redux was used to centralise state which is used by multiple components. This allows the state to be decoupled from components that are responsible for managing the view.
+
+## Backend
+Java and Spring Boot was chosen for the backend to facilitate quicker development. There are many tools inside Spring Boot that allow getting started quickly.
+* Features include dependency injection and the Spring Data framework.
+* Spring Data contains Repository abstractions that allow boilerplate CRUD functionality to be defined through annotations and simple Java interfaces.
+* In addition, a not so familiar library called *Lombok* was used. This library automates the generation of boilerplate code such as constructors, getters/setters, etc. and works through annotations marked on POJO classes.
+  
+## Database
+MongoDB was chosen for the backend mainly because it is free and very flexible in terms of what it can store. Even the product images can be stored within the database. The product images are, however, stored on the frontend web server to allow faster load times when scaling up. However, complex object structures can be saved in MongoDB without requiring relational links between MongoDB Collections (known as tables in relational databases). An example of this is the Order collection (table, in relational database terminology). The Order collection consists of a one-to-many Order-to-Product relationship.
+
+# Improvements
+* Actual user authentication with passwords. This was left out to simplify the implementation.
+* Reduction of the stock once order has processed.
+* Search functionality to be able to search for items from previous orders.
+* More unit tests on the New Order Service class.
+* Streamlined frontend design with Bootstrap and ReactJS features.
+
 # Getting Started
-### Pre-requisites
+## Pre-requisites
 * Docker
   * https://docs.docker.com/get-docker/
 * Git (optional as you can download the code directly from this website and unpack it)
@@ -10,12 +31,12 @@ This is a small project designed to showcase a simple shopping cart experience. 
     * Or via homebrew (MacOSX): ```brew install git```   
 * A solid internet connection!
 
-### Running the application
+## Running the application
 1. ```git clone https://github.com/arslanz/market.git``` 
 2. ```cd market```
 3. ```docker-compose up```
 
-### Using the application
+## Using the application
 1. Go to http://localhost:3000
 2. Enter a username, click *Sign in*
 3. Initially, you will be prompted to create the username ( since no users exist)
@@ -31,28 +52,7 @@ This is a small project designed to showcase a simple shopping cart experience. 
 13. Click the *Order Id* link to open the Order Summary for the selected previous order
 14. Click the top-right *Sign out* button once ready to exit or to Sign in as a different user
 
-
-### Design and architecture
-* ReactJS was chosen for the frontend because it is fast, responsive and has tools to manage state.
-  * Within the ReactJS library, Redux was used to centralise state which is used by multiple components. This allows the state to be decoupled from components that are responsible for managing the view.
-
-* Java and Spring Boot was chosen for the backend to facilitate quicker development. There are many tools inside Spring Boot that allow getting started quickly.
-  * Features include dependency injection and the Spring Data framework.
-  * Spring Data contains Repository abstractions that allow boilerplate CRUD functionality to be defined through annotations and simple Java interfaces.
-  * In addition, a not so familiar library called *Lombok* was used. This library automates the generation of boilerplate code such as constructors, getters/setters, etc. and works through annotations marked on POJO classes.
-  
-* MongoDB was chosen for the backend mainly because it is free and very flexible in terms of what it can store. Even storing the images for the products can be stored within the database. The product images are actually stored on the frontend web server to allow faster load times when scaling up. However, complex object structures can be saved in MongoDB without requiring relational links between MongoDB Collections (known as tables in relational databases).
-
-
-
-#### Improvements
-* Actual user authentication with passwords. This was left out to simplify the implementation.
-* Reduction of the stock once order has processed.
-* Search functionality to be able to search for items from previous orders.
-* More unit tests on the New Order Service class.
-* Streamlined frontend design with Bootstrap and ReactJS features.
-
-### Running locally
+## Running locally
 ### Frontend code
 The frontend code is in the ```./frontend``` folder. To run the code you will need to install node.
 * https://nodejs.org/en/
